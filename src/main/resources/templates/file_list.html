@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+	<div th:fragment="urlFileList">
+
+		<div class="table-responsive">
+			<table class="table table-striped" id="tblFileList">
+				<thead>
+					<tr>
+						<th>Descripcion</th>
+						<th>Download File</th>
+						<th>Opciones</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="entry : ${listOfEntries}">
+						<td th:text="${entry.descripcion}"> </td>
+						<td><a th:href="${entry.href}" th:text="${entry.hrefText}">file</a></td>
+						<td><a href="#" class='btn btn-primary'><i class="fas fa-edit"></i></a></td>
+					</tr>cx
+				</tbody>
+			</table>
+		</div>
+		
+
+	</div>
+
+</body>
+</html>
